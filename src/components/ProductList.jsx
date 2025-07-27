@@ -15,11 +15,11 @@ const ProductList = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
-  const { search, priceRange, availability, selectedBrands } = useFilter();
+  const { search, priceRange, availability, selectedBrands, selectedCategories } = useFilter();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [search, priceRange, availability, selectedBrands]);
+  }, [search, priceRange, availability, selectedBrands , selectedCategories]);
 
   useEffect(() => {
     if (isModalOpen) {
